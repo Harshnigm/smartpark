@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html class='no+js' lang="">
+<head>
+<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<style>
+.invisible {
+    position: absolute;
+    left: -9999px;
+}
+</style>
+
+
+</head>
+
+<body>
+     
+     <div style="width:600px;">
+     <canvas id="myChart" height="200" width="200"></canvas>
+       </div>
+
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+
+     <div id='info' class='invisible' style=>{{ title }}</div>
+     
+
+
+     
+<script>
+
+window.onload=function(){
+
+
+var info =$('#info')
+info=info.html()
+//console.log(info)
+info=info.split(" ")
+console.log(info)
+xaxis=[]
+for(var i=0;i<24;i++){xaxis[i]=i+1}
+yaxis=[]
+for(var i=1;i<25;i++){yaxis[i-1]=parseInt(info[i])}
+
+
+console.log(yaxis)
+
+
+
+
+
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: xaxis,
+        datasets: [{
+            label: '# of Votes',
+            data: yaxis,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+}
+</script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+     
+</body>
+
+</html>

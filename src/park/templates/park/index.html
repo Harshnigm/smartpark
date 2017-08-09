@@ -1,0 +1,86 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script>
+
+window.onload=function(){
+    
+	var s=$('#info')
+	//s.style.backgroundColor ="red"
+
+	var info=s.html()
+  //  var slots=$('.slots')
+    console.log(info)
+    
+
+    id=["A1","A2","A3","A4"]
+
+    for(var i=0;i<info.length;i++){
+         
+         var t=id[i]
+         console.log(t) 
+         
+         if(info[i]==0){
+         	document.getElementById(t).style.backgroundColor = "green"
+
+
+         }
+         else{document.getElementById(t).style.backgroundColor ="red"}
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+
+.slots{
+	background-color: #db6262;
+	width: 100px;
+    height: 60px;
+    font-size: 50px;
+
+}
+.invisible {
+    position: absolute;
+    left: -9999px;
+}
+
+
+
+
+</style>
+   
+
+
+
+</head>
+<body>
+    
+	<div id='info' class='invisible'>{{ title }}</div>
+	<br><br><br>
+	
+	<p id="A1" class="slots">A1</p><br>
+	<p id="A2" class="slots">A2</p><br>
+	<p id="A3" class="slots">A3</p><br>
+	<p id="A4" class="slots">A4</p><br>
+</body>
+
+</html>

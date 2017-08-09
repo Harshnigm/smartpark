@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 7px;
+}
+</style>
+</head
+
+<body>
+
+	<h1> {{ title }} working</h1>
+
+	<table style="width:35%">
+       <tr>
+           <th>Time</th>
+           <th>A1</th>
+           <th>A2</th> 
+           <th>A3</th>
+           <th>A4</th>
+        </tr>
+
+	
+
+    {% for obj in object_list %}
+
+
+
+       <tr>
+         <td>{{obj.timestamp}}</td>
+         <td>{{obj.A1}}</td>
+         <td>{{obj.A2}}</td>
+         <td>{{obj.A3}}</td>
+         <td>{{obj.A4}}</td>
+       </tr>
+
+    
+   
+
+
+
+    {% endfor %}
+
+
+    </table>
+
+
+</body>
+
+</html>
