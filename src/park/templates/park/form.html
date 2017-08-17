@@ -1,0 +1,60 @@
+.
+<html>
+<head></head>
+
+<body>
+
+<div class="heading">
+<h1> <center>   Welcome to Smart Park Form</marquee> 
+</h1>
+</div>
+
+
+
+<table id=d align=center>
+<th>
+<form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
+{{form.as_p}}
+<input type='submit' value='createform'>
+</form>
+</th>
+</table>
+
+
+
+
+
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    height:140px;
+    margin-left:550px;
+    font-size:130%;
+}
+
+h1{
+margin-top:-10px;
+background:DodgerBlue;
+height:140px;
+float:center;
+font-size:500%;
+
+}
+
+#d{
+margin:-10px;
+height:140px;
+border:10;
+
+}
+
+</style>
+
+
+<footer>
+<p><center> Note:Always wear your seat belts while driving</center></p>
+</footer>
+
+</body>
+</html>

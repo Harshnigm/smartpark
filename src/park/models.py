@@ -19,3 +19,28 @@ class Post(models.Model):
 	def __str__(self):
 		return str(self.timestamp)
 
+
+
+class Post_form(models.Model):
+	Number=models.CharField(max_length=140)
+	Slot=models.CharField(max_length=140)
+        #OTP=models.CharField(max_length=140)
+	
+
+	def __str__(self):
+		return self.Number
+
+	#def get_absolute_url(self):
+	#	return "/blog/%s/"%(self.id)
+
+
+
+
+
+
+class otp_db(models.Model):
+	otp=models.CharField(max_length=140)
+	
+
+	def __str__(self):
+		return self.otp
